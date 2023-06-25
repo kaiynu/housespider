@@ -13,11 +13,17 @@ namespace Admin.NET.Web.Entry.Controllers
         //    _systemService = systemService;
         //}
 
-        public IActionResult Index()
+        public IActionResult About()
         {
-            //ViewBag.Description = _systemService.GetDescription();
+            ViewBag.Description = "11111111111";
 
             return View();
         }
-    }
+		public IActionResult Index()
+		{
+			ViewBag.Description = "11111111111";
+
+			return View();
+		}
+	}
 }

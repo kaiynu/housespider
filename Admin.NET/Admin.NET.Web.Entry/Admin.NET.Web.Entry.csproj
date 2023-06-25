@@ -37,6 +37,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Content Update="Views\Home\About.cshtml">
+		  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+		  <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
 		<Content Update="wwwroot\Template\data.data.ts.vm">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
