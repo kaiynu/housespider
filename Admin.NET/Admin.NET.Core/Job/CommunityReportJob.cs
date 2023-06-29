@@ -10,7 +10,7 @@ namespace Admin.NET.Core;
 /// 小区抓取服务
 /// </summary>
 [JobDetail("CommunityReportJob", Description = "小区抓取服务", GroupName = "default", Concurrent = false)]
-[Daily(TriggerId = "trigger_CommunityReportJob", Description = "小区抓取服务")]
+[Monthly(TriggerId = "trigger_CommunityReportJob", Description = "小区抓取服务")]
 public class CommunityReportJob : IJob
 {
 	private readonly IServiceProvider _serviceProvider;
@@ -72,9 +72,13 @@ public class CommunityReportJob : IJob
 				html.LoadHtml(cont);
 				var document = html.DocumentNode;
 				var pageNode = document.QuerySelector(".page-box .house-lst-page-box");
-				var pageData = JsonConvert.DeserializeObject<Hashtable>(pageNode.GetAttributeValue("page-data", ""));
-				var maxPage = pageData["totalPage"].ToInt();
-				var pageUrl = pageNode.GetAttributeValue("page-url", "");
+				var maxPage = 1;
+				if (pageNode != null)
+				{
+					var pageData = JsonConvert.DeserializeObject<Hashtable>(pageNode.GetAttributeValue("page-data", ""));
+					 maxPage = pageData["totalPage"].ToInt();
+				}
+				var pageUrl = pageNode?.GetAttributeValue("page-url", "");
 				var curPage = 1;
 				var comlist = new List<CommunityReport>();
 				do
@@ -113,6 +117,10 @@ public class CommunityReportJob : IJob
 						comlist.Add(item);
 					}
 					curPage++;
+					if (pageUrl.IsNullOrEmpty())
+					{
+						break;
+					}
 					cont = WebUtils.Get(host, pageUrl.Replace("{page}", curPage.ToString()));
 					html = new HtmlDocument();
 					html.LoadHtml(cont);
@@ -123,7 +131,6 @@ public class CommunityReportJob : IJob
 				if (comlist.Count > 0)
 				{
 					rep.InsertRange(comlist);
-					DoHouse(comlist, host, batchid);
 				}
 			}
 
@@ -137,122 +144,8 @@ public class CommunityReportJob : IJob
 
 		}
 	}
-	private void DoHouse(List<CommunityReport> communities, string host, DateTime batchid)
-	{
-		try
-		{
 
-
-			var url = "/ershoufang/c{0}/";
-			using var serviceScope = _serviceProvider.CreateScope();
-			var rep = serviceScope.ServiceProvider.GetService<SqlSugarRepository<HouseReport>>();
-			foreach (var item in communities)
-			{
-				if (item.Url.IsNullOrWhiteSpace())
-				{
-					continue;
-				}
-				var comId = item.Url.Split('/', StringSplitOptions.RemoveEmptyEntries).LastOrDefault();
-				if (comId.IsNullOrWhiteSpace())
-				{
-					continue;
-				}
-				var cont = WebUtils.Get(host, string.Format(url, comId));
-				HtmlDocument html = new HtmlDocument();
-				html.LoadHtml(cont);
-				var document = html.DocumentNode;
-				var pageNode = document.QuerySelector(".page-box .house-lst-page-box");
-				var pageData = JsonConvert.DeserializeObject<Hashtable>(pageNode.GetAttributeValue("page-data", ""));
-				var maxPage = pageData["totalPage"].ToInt();
-				var pageUrl = pageNode.GetAttributeValue("page-url", "");
-				var curPage = 1;
-				var list = new List<HouseReport>();
-				do
-				{
-					var nodes = document.QuerySelectorAll("ul.sellListContent li");
-					foreach (var node in nodes)
-					{
-						var a = node.QuerySelector("a");
-						var t = DoHouseDetail(item, a.GetAttributeValue("href", ""), batchid);
-						if (t != null)
-						{
-							list.Add(t);
-						}
-					}
-					curPage++;
-					cont = WebUtils.Get(host, pageUrl.Replace("{page}", curPage.ToString()));
-					html = new HtmlDocument();
-					html.LoadHtml(cont);
-					document = html.DocumentNode;
-				}
-				while (maxPage > curPage);
-				if (list.Count > 0)
-				{
-					rep.InsertRange(list);
-				}
-
-			}
-		}
-		catch (Exception e)
-		{
-			Log.Error("DoHouse:" + e);
-
-		}
-	}
-	private HouseReport DoHouseDetail(CommunityReport communitie, string url, DateTime batchid)
-	{
-		try
-		{
-
-
-			var obj = new HouseReport();
-
-			var cont = WebUtils.Get(url, "");
-			HtmlDocument html = new HtmlDocument();
-			html.LoadHtml(cont);
-			var document = html.DocumentNode;
-			obj.Url= url;
-			obj.Name = document.QuerySelector(".detailHeader .main").GetAttributeValue("title", "");
-			obj.BatchId = batchid;
-			obj.AvgPrive = document.QuerySelector(".price-container .unitPriceValue").InnerText.ToDecimal();
-			obj.TotalPrice = document.QuerySelector(".price-container .total").InnerText.ToDecimal();
-			obj.CommunityName = communitie.Name;
-			obj.ReportDate = DateTime.Now.Date;
-			obj.HotArea = communitie.HotArea;
-			var introContent = document.QuerySelectorAll(".introContent .base li .label").ToList();
-			obj.HuXing = introContent[0].NextSibling.InnerText.TrimAll();
-			obj.Size = introContent[1].NextSibling.InnerText.TrimAll();
-			obj.HuXingJieGou = introContent[2].NextSibling.InnerText.TrimAll();
-			obj.BuildType = introContent[3].NextSibling.InnerText.TrimAll();
-			obj.BuildLevel = introContent[4].NextSibling.InnerText.TrimAll();
-			obj.InnerSize = introContent[5].NextSibling.InnerText.TrimAll();
-			obj.BuildJieGou = introContent[6].NextSibling.InnerText.TrimAll();
-			obj.ZhuangXiu = introContent[7].NextSibling.InnerText.TrimAll();
-			obj.TiHuBiLi = introContent[8].NextSibling.InnerText.TrimAll();
-			obj.DianTi = introContent[9].NextSibling.InnerText.TrimAll();
-			var introContent2 = document.QuerySelectorAll(".introContent .transaction li .label").ToList();
-			obj.GuaPaiTime = introContent2[0].NextSibling.InnerText.TrimAll().ToDateTime();
-			obj.JiaoYiQuanShu = introContent2[1].NextSibling.InnerText.TrimAll();
-			obj.ShangCiJiaoYi = introContent2[2].NextSibling.InnerText.TrimAll();
-			obj.FangWuYongTu = introContent2[3].NextSibling.InnerText.TrimAll();
-			obj.FangYuanHeYanMa = introContent2.Last().NextSibling.InnerText.TrimAll();
-			var smallpics = document.QuerySelectorAll(".thumbnail .smallpic li").Select(i => new ImgDto { Src = i.QuerySelector("img").GetAttributeValue("src", ""), Desc = i.GetAttributeValue("data-desc", "") }).ToList();
-			obj.ThumbImgUrl = smallpics.First().Src;
-			obj.AllImgUrl = JsonConvert.SerializeObject(smallpics);
-			return obj;
-		}
-		catch (Exception e)
-		{
-			Log.Error("DoHouseDetail:" + e);
-			return null;
-		}
-	}
-
-	public class ImgDto
-	{
-		public string Desc { get; set; }
-		public string Src { get; set; }
-	}
+	
 	public class AreaDto
 	{
 		public string Name { get; set; }
