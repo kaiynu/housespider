@@ -7,10 +7,10 @@ using static SKIT.FlurlHttpClient.Wechat.Api.Models.ChannelsECMerchantAddFreight
 namespace Admin.NET.Core;
 
 /// <summary>
-/// 小区抓取服务
+/// 房产抓取服务
 /// </summary>
 [JobDetail("HomeReportJob", Description = "房产抓取服务", GroupName = "default", Concurrent = false)]
-[Weekly(TriggerId = "trigger_HomeReportJob", Description = "房产抓取服务")]
+[Cron("0 0 12 /2 * ? *", Furion.TimeCrontab.CronStringFormat.WithSecondsAndYears, TriggerId = "trigger_HomeReportJob", Description = "房产抓取服务")]
 public class HomeReportJob : IJob
 {
 	private readonly IServiceProvider _serviceProvider;
@@ -67,21 +67,22 @@ public class HomeReportJob : IJob
 			var url = "/ershoufang/c{0}/";
 			using var serviceScope = _serviceProvider.CreateScope();
 			var rep = serviceScope.ServiceProvider.GetService<SqlSugarRepository<HouseReport>>();
-			foreach (var item in communities)
+			foreach (var communitie in communities)
 			{
-				if (item.Url.IsNullOrWhiteSpace())
+				if (communitie.Url.IsNullOrWhiteSpace())
 				{
 					continue;
 				}
-				var comId = item.Url.Split('/', StringSplitOptions.RemoveEmptyEntries).LastOrDefault();
+				var comId = communitie.Url.Split('/', StringSplitOptions.RemoveEmptyEntries).LastOrDefault();
 				if (comId.IsNullOrWhiteSpace())
 				{
 					continue;
 				}
 				if (url.Contains("goodhouse"))
 				{
-					Console.WriteLine("=========c===============:"+item.Id);
+					continue;
 				}
+
 				var cont = WebUtils.Get(host, string.Format(url, comId));
 				HtmlDocument html = new HtmlDocument();
 				html.LoadHtml(cont);
@@ -104,15 +105,30 @@ public class HomeReportJob : IJob
 					foreach (var node in nodes)
 					{
 						var a = node.QuerySelector("a");
+						var info = node.QuerySelector(".info");
+						var houseInfo = node.QuerySelector(".houseInfo");
 						var href = a?.GetAttributeValue("href", "");
-						if (href.IsNullOrEmpty() || href.Contains("goodhouse"))
+						if (href.Contains("goodhouse"))
 						{
-							continue;	
+							continue;
 						}
-						var t = DoHouseDetail(item,href , batchid);
-						if (t != null)
+						var obj = new HouseReport();
+						obj.Url = href;
+						obj.CommunityName = communitie.Name;
+						obj.City = communitie.City;
+						obj.Region = communitie.Region;
+						obj.Province = communitie.Province;
+						obj.ReportDate = DateTime.Now.Date;
+						obj.HotArea = communitie.HotArea;
+						obj.Name = a.GetAttributeValue("title", "").TrimAll();
+						obj.ThumbImgUrl=a.QuerySelector(".lj-lazy")?.GetAttributeValue("data-original","").TrimAll();
+						obj.TotalPrice=info?.QuerySelector(".totalPrice span")?.InnerText.TrimAll().ToDecimal();
+						obj.AvgPrive = info?.QuerySelector(".unitPrice span")?.InnerText.Replace("元/平","").Replace(",","").TrimAll().ToDecimal();
+						obj.BatchId = batchid;
+						obj.ReportDate= DateTime.Now.Date;
+						if (obj != null)
 						{
-							list.Add(t);
+							list.Add(obj);
 						}
 					}
 					curPage++;
@@ -130,6 +146,12 @@ public class HomeReportJob : IJob
 				if (list.Count > 0)
 				{
 					rep.InsertRange(list);
+					foreach (var item in list)
+					{
+						Task.Run(() => {
+							DoHouseDetail(item);
+						});
+					}
 				}
 
 			}
@@ -140,31 +162,16 @@ public class HomeReportJob : IJob
 
 		}
 	}
-	private HouseReport DoHouseDetail(CommunityReport communitie, string url, DateTime batchid)
+	private HouseReport DoHouseDetail(HouseReport obj)
 	{
 		try
 		{
-
-
-			var obj = new HouseReport();
-
-			var cont = WebUtils.Get(url, "");
+			using var serviceScope = _serviceProvider.CreateScope();
+			var rep = serviceScope.ServiceProvider.GetService<SqlSugarRepository<HouseReport>>();
+			var cont = WebUtils.Get(obj.Url, "");
 			HtmlDocument html = new HtmlDocument();
 			html.LoadHtml(cont);
 			var document = html.DocumentNode;
-			obj.Url= url;
-			var nameNode = document.QuerySelector(".detailHeader .main");
-			if (nameNode == null)
-			{
-				return null;
-			}
-			obj.Name = nameNode.GetAttributeValue("title", "");
-			obj.BatchId = batchid;
-			obj.AvgPrive = document.QuerySelector(".price-container .unitPriceValue").InnerText.ToDecimal();
-			obj.TotalPrice = document.QuerySelector(".price-container .total").InnerText.ToDecimal();
-			obj.CommunityName = communitie.Name;
-			obj.ReportDate = DateTime.Now.Date;
-			obj.HotArea = communitie.HotArea;
 			var introContent = document.QuerySelectorAll(".introContent li .label").ToList();
 			obj.HuXing = GetBaseInfo(introContent,"房屋户型");
 			obj.Size = GetBaseInfo(introContent, "建筑面积");
@@ -176,17 +183,16 @@ public class HomeReportJob : IJob
 			obj.BuildJieGou = GetBaseInfo(introContent, "建筑结构");
 			obj.ZhuangXiu = GetBaseInfo(introContent, "装修情况");
 			obj.TiHuBiLi = GetBaseInfo(introContent, "梯户比例");
-			obj.DianTi = GetBaseInfo(introContent, "配备电梯");
-			
+			obj.DianTi = GetBaseInfo(introContent, "配备电梯");			
 			obj.GuaPaiTime = GetBaseInfo(introContent, "挂牌时间").ToDateTime();
 			obj.JiaoYiQuanShu = GetBaseInfo(introContent, "交易权属");
 			obj.ShangCiJiaoYi = GetBaseInfo(introContent, "上次交易");
 			obj.FangWuYongTu = GetBaseInfo(introContent, "房屋用途");
 			obj.FangYuanHeYanMa = GetBaseInfo(introContent, "房源核验码");
 			var smallpics = document.QuerySelectorAll(".thumbnail .smallpic li").Select(i => new ImgDto { Src = i.QuerySelector("img").GetAttributeValue("src", ""), Desc = i.GetAttributeValue("data-desc", "") }).ToList();
-			obj.ThumbImgUrl = smallpics.First().Src;
 			obj.AllImgUrl = JsonConvert.SerializeObject(smallpics);
-			return obj;
+			rep.Update(obj);
+			return null;
 		}
 		catch (Exception e)
 		{

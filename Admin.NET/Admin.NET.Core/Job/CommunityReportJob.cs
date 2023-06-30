@@ -10,7 +10,7 @@ namespace Admin.NET.Core;
 /// 小区抓取服务
 /// </summary>
 [JobDetail("CommunityReportJob", Description = "小区抓取服务", GroupName = "default", Concurrent = false)]
-[Monthly(TriggerId = "trigger_CommunityReportJob", Description = "小区抓取服务")]
+[Cron("0 15 20 L * ? *",Furion.TimeCrontab.CronStringFormat.WithSecondsAndYears, TriggerId = "trigger_CommunityReportJob", Description = "小区抓取服务")]
 public class CommunityReportJob : IJob
 {
 	private readonly IServiceProvider _serviceProvider;
@@ -130,7 +130,7 @@ public class CommunityReportJob : IJob
 				while (maxPage > curPage);
 				if (comlist.Count > 0)
 				{
-					rep.InsertRange(comlist);
+					rep.InsertRange(comlist.DistinctBy(i=>i.Url).ToList());
 				}
 			}
 

@@ -73,6 +73,17 @@ public class HouseReport : EntityBase
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
 	public string? HuXing { get; set; }
+
+	[SugarColumn(Length = 100)]
+	[MaxLength(100)]
+	public string? Region { get; set; }
+	[SugarColumn(Length = 100)]
+	[MaxLength(100)]
+	public string? City { get; set; }
+
+	[SugarColumn(Length = 100)]
+	[MaxLength(100)]
+	public string? Province { get; set; }
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
 	public string? Size { get; set; }
@@ -85,6 +96,10 @@ public class HouseReport : EntityBase
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
 	public string? BuildLevel { get; set; }
+	[SugarColumn(Length = 100)]
+	[MaxLength(100)]
+	public string? BuildYear { get; set; }
+	public int? TotalLevel { get; set; }
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
 	public string? InnerSize { get; set; }
