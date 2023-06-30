@@ -102,6 +102,10 @@ public class HomeReportJob : IJob
 				do
 				{
 					var nodes = document.QuerySelectorAll("ul.sellListContent li");
+					if(nodes==null|| nodes.Count() == 0)
+					{
+						break;
+					}
 					foreach (var node in nodes)
 					{
 						var a = node.QuerySelector("a");
@@ -178,6 +182,11 @@ public class HomeReportJob : IJob
 			obj.HuXingJieGou = GetBaseInfo(introContent, "户型结构"); ;
 			obj.BuildType = GetBaseInfo(introContent, "建筑类型");
 			obj.BuildLevel = GetBaseInfo(introContent, "所在楼层");
+			var match = new Regex("共(\\d+)层").Match(obj.BuildLevel);
+			if (match.Success)
+			{
+				obj.TotalLevel = match.Groups[1].Value.ToInt();
+			}
 			obj.InnerSize = GetBaseInfo(introContent, "套内面积");
 			obj.Direction = GetBaseInfo(introContent, "房屋朝向");
 			obj.BuildJieGou = GetBaseInfo(introContent, "建筑结构");
