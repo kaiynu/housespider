@@ -10,7 +10,7 @@ namespace Admin.NET.Core;
 /// 房产抓取服务
 /// </summary>
 [JobDetail("HomeReportJob", Description = "房产抓取服务", GroupName = "default", Concurrent = false)]
-[Cron("0 0 12 /2 * ? *", Furion.TimeCrontab.CronStringFormat.WithSecondsAndYears, TriggerId = "trigger_HomeReportJob", Description = "房产抓取服务")]
+[Cron("0 0 12 /2 * ? *", Furion.TimeCrontab.CronStringFormat.WithSecondsAndYears, TriggerId = "trigger_HomeReportJob", Description = "房产抓取服务",RunOnStart =true)]
 public class HomeReportJob : IJob
 {
 	private readonly IServiceProvider _serviceProvider;
