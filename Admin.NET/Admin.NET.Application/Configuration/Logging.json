@@ -8,10 +8,10 @@
             "Microsoft.EntityFrameworkCore": "Information"
         },
         "File": {
-            "Enabled": false, // 启用文件日志
+            "Enabled": true, // 启用文件日志
             "FileName": "logs/{0:yyyyMMdd}_{1}.log", // 日志文件
             "Append": true, // 追加覆盖
-            // "MinimumLevel": "Information", // 日志级别
+            "MinimumLevel": "Information", // 日志级别
             "FileSizeLimitBytes": 10485760, // 10M=10*1024*1024
             "MaxRollingFiles": 30 // 只保留30个文件
         },

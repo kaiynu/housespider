@@ -14,47 +14,58 @@ namespace Admin.NET.Core;
 public class CommunityReportJob : IJob
 {
 	private readonly IServiceProvider _serviceProvider;
+	private List<AreaDto> citys = new List<AreaDto>();
 
 	public CommunityReportJob(IServiceProvider serviceProvider)
 	{
 		_serviceProvider = serviceProvider;
+		citys.Add(new AreaDto() { Host= "https://cd.ke.com",Provice="四川",City="成都" });
+		citys.Add(new AreaDto() { Host = "https://nc.ke.com", Provice = "江西", City = "南昌" });
+		citys.Add(new AreaDto() { Host = "https://sh.ke.com", Provice = "上海", City = "上海" });
+		citys.Add(new AreaDto() { Host = "https://bj.ke.com", Provice = "北京", City = "北京" });
+		citys.Add(new AreaDto() { Host = "https://sz.ke.com", Provice = "深圳", City = "深圳" });
 	}
 
 	public async Task ExecuteAsync(JobExecutingContext context, CancellationToken stoppingToken)
 	{
 		var batchId = DateTime.Now;
-		var url = "https://cd.ke.com";
-		var city = "成都";
-		var province = "四川";
-		var cont = WebUtils.Get(url, "/xiaoqu");
-		HtmlDocument html = new HtmlDocument();
-		html.LoadHtml(cont);
-		var document = html.DocumentNode;
-		var areas = new List<AreaDto>();
-		var nodes = document.QuerySelectorAll(".position a.CLICKDATA");
-		foreach (var node in nodes)
-		{
-			areas.Add(new AreaDto()
-			{
-				Name = node.InnerText.TrimAll(),
-				Url = url + node.GetAttributeValue("href", ""),
-				City = city,
-				Provice = province,
-			}
-			);
-		}
 		var tasks = new List<Task>();
 		Func<object?, bool> fuc = (object? dto) =>
 		{
 			var area = dto as AreaDto;
-			return DoCommunty(area, batchId, url);
+			return DoCommunty(area, batchId, area.Host);
 		};
-		foreach (var area in areas)
+		foreach (var item in citys)
 		{
-			tasks.Add(Task<bool>.Factory.StartNew(fuc, area));
+			var host = item.Host;
+			var city = item.City;
+			var province = item.Provice;
+			var cont = WebUtils.Get(host, "/xiaoqu");
+			HtmlDocument html = new HtmlDocument();
+			html.LoadHtml(cont);
+			var document = html.DocumentNode;
+			var areas = new List<AreaDto>();
+			var nodes = document.QuerySelectorAll(".position a.CLICKDATA");
+			foreach (var node in nodes)
+			{
+				areas.Add(new AreaDto()
+				{
+					Name = node.InnerText.TrimAll(),
+					Url = host + node.GetAttributeValue("href", ""),
+					City = city,
+					Provice = province,
+					Host=item.Host
+				}
+				);
+			}
+			
+			foreach (var area in areas)
+			{
+				tasks.Add(Task<bool>.Factory.StartNew(fuc, area));
+			}			
 		}
 		Task.WaitAll(tasks.ToArray());
-		Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMilliseconds);
+		Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMinutes);
 	}
 	private bool DoCommunty(AreaDto area, DateTime batchid, string host)
 	{
@@ -85,6 +96,24 @@ public class CommunityReportJob : IJob
 				{
 
 					var nodes = document.QuerySelectorAll("ul.listContent li");
+					if (nodes == null || nodes.Count() == 0)
+					{
+						int rety = 0;
+						while (rety<10)
+						{
+							Thread.Sleep(2*1000);
+							cont = WebUtils.Get(host, pageUrl.Replace("{page}", curPage.ToString())+"?t="+DateTime.Now.Ticks);
+							html = new HtmlDocument();
+							html.LoadHtml(cont);
+							document = html.DocumentNode;
+							nodes = document.QuerySelectorAll("ul.listContent li");
+							if (nodes != null && nodes.Count() > 0)
+							{
+								break;
+							}
+							rety++;
+						}
+					}
 					foreach (var node in nodes)
 					{
 						var a = node.QuerySelector(".info .title .maidian-detail");

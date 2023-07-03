@@ -1,4 +1,5 @@
 ﻿
+using HtmlAgilityPack;
 using RestSharp;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -53,16 +54,42 @@ namespace Admin.NET.Core
 		/// </remarks>
 		public static string Get(string host, string action)
         {
-            if (host.IsNullOrEmpty())
-                return string.Empty;
-            var client = new RestClient(host);
-            var request = new RestRequest(action, Method.Get);
-            request.AddHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8");
-            var response = client.Execute(request);
-            var content = response.Content;
-            Console.WriteLine("======request:"+host+action);
-            return content;
-        }
+            try
+            {
+
+
+
+                if (host.IsNullOrEmpty())
+                    return string.Empty;
+                var client = new RestClient(host);
+                var request = new RestRequest(action, Method.Get);
+                request.AddHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8");
+                var response = client.Execute(request);
+                var content = response.Content;
+                Console.WriteLine("======request:" + host + action);
+                if (content.IsNullOrEmpty())
+                {
+					int rety = 0;
+					while (rety < 10)
+					{
+						Thread.Sleep(2 * 1000);
+						response = client.Execute(request);
+						content = response.Content;
+						if (content.IsNullOrEmpty()==false)
+						{
+							break;
+						}
+						rety++;
+					}
+				}
+                return content;
+            }
+            catch (Exception)
+            {
+
+            }
+            return "";
+		}
 
        
         #endregion

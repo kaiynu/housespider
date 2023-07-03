@@ -32,30 +32,32 @@ public class HomeReportJob : IJob
 		}
 		var pageIndex = 0;
 		var pageSize = 2000;
-		
+
 		var batchId = DateTime.Now;
 		var url = "https://cd.ke.com";
 		var tasks = new List<Task>();
 		Func<object?, bool> fuc = (object? dto) =>
 		{
 			var areas = dto as List<CommunityReport>;
-			DoHouse(areas,url, batchId);
+			DoHouse(areas, url, batchId);
 			return true;
 		};
 		do
 		{
 			var comList = repCom.GetPageList(i => i.BatchId == batTime.Value, new PageModel() { PageIndex = pageIndex, PageSize = pageSize });
-			if (comList.Count == 0)
+			//var comList = repCom.GetList(i => i.BatchId == batTime.Value);
+			if (comList.Count() == 0)
 			{
 				break;
 			}
 			tasks.Add(Task<bool>.Factory.StartNew(fuc, comList));
+
 			pageIndex++;
 		} while (true);
-			
-		
+
+
 		Task.WaitAll(tasks.ToArray());
-		Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMilliseconds);
+		Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMinutes);
 	}
 
 	private void DoHouse(List<CommunityReport> communities, string host, DateTime batchid)
@@ -69,96 +71,138 @@ public class HomeReportJob : IJob
 			var rep = serviceScope.ServiceProvider.GetService<SqlSugarRepository<HouseReport>>();
 			foreach (var communitie in communities)
 			{
-				if (communitie.Url.IsNullOrWhiteSpace())
+				try
 				{
-					continue;
-				}
-				var comId = communitie.Url.Split('/', StringSplitOptions.RemoveEmptyEntries).LastOrDefault();
-				if (comId.IsNullOrWhiteSpace())
-				{
-					continue;
-				}
-				if (url.Contains("goodhouse"))
-				{
-					continue;
-				}
+					if (communitie.Url.IsNullOrWhiteSpace())
+					{
+						continue;
+					}
+					var comId = communitie.Url.Split('/', StringSplitOptions.RemoveEmptyEntries).LastOrDefault();
+					if (comId.IsNullOrWhiteSpace())
+					{
+						continue;
+					}
+					if (url.Contains("goodhouse"))
+					{
+						continue;
+					}
 
-				var cont = WebUtils.Get(host, string.Format(url, comId));
-				HtmlDocument html = new HtmlDocument();
-				html.LoadHtml(cont);
-				var document = html.DocumentNode;
-				var pageNode = document.QuerySelector(".page-box .house-lst-page-box");
-				var maxPage = 1;
-				if (pageNode != null)
-				{
-					var pageData = JsonConvert.DeserializeObject<Hashtable>(pageNode.GetAttributeValue("page-data", ""));
-					maxPage = pageData["totalPage"].ToInt();
-				}
-				
-				
-				var pageUrl = pageNode?.GetAttributeValue("page-url", "");
-				var curPage = 1;
-				var list = new List<HouseReport>();
-				do
-				{
-					var nodes = document.QuerySelectorAll("ul.sellListContent li");
-					if(nodes==null|| nodes.Count() == 0)
-					{
-						break;
-					}
-					foreach (var node in nodes)
-					{
-						var a = node.QuerySelector("a");
-						var info = node.QuerySelector(".info");
-						var houseInfo = node.QuerySelector(".houseInfo");
-						var href = a?.GetAttributeValue("href", "");
-						if (href.Contains("goodhouse"))
-						{
-							continue;
-						}
-						var obj = new HouseReport();
-						obj.Url = href;
-						obj.CommunityName = communitie.Name;
-						obj.City = communitie.City;
-						obj.Region = communitie.Region;
-						obj.Province = communitie.Province;
-						obj.ReportDate = DateTime.Now.Date;
-						obj.HotArea = communitie.HotArea;
-						obj.Name = a.GetAttributeValue("title", "").TrimAll();
-						obj.ThumbImgUrl=a.QuerySelector(".lj-lazy")?.GetAttributeValue("data-original","").TrimAll();
-						obj.TotalPrice=info?.QuerySelector(".totalPrice span")?.InnerText.TrimAll().ToDecimal();
-						obj.AvgPrive = info?.QuerySelector(".unitPrice span")?.InnerText.Replace("元/平","").Replace(",","").TrimAll().ToDecimal();
-						obj.BatchId = batchid;
-						obj.ReportDate= DateTime.Now.Date;
-						if (obj != null)
-						{
-							list.Add(obj);
-						}
-					}
-					curPage++;
-					if (pageUrl.IsNullOrEmpty())
-					{
-						break;
-					}
-					cont = WebUtils.Get(host, pageUrl?.Replace("{page}", curPage.ToString()));
-					html = new HtmlDocument();
+					var cont = WebUtils.Get(host, string.Format(url, comId) + "?t=" + DateTime.Now.Ticks);
+					HtmlDocument html = new HtmlDocument();
 					html.LoadHtml(cont);
-					document = html.DocumentNode;
-
-				}
-				while (maxPage > curPage);
-				if (list.Count > 0)
-				{
-					rep.InsertRange(list);
-					foreach (var item in list)
+					var document = html.DocumentNode;
+					var pageNode = document.QuerySelector(".page-box .house-lst-page-box");
+					var maxPage = 1;
+					if (pageNode != null)
 					{
-						Task.Run(() => {
-							DoHouseDetail(item);
-						});
+						var pageData = JsonConvert.DeserializeObject<Hashtable>(pageNode.GetAttributeValue("page-data", ""));
+						maxPage = pageData["totalPage"].ToInt();
+					}
+
+					var pageUrl = (pageNode?.GetAttributeValue("page-url", "")) ?? "";
+					var curPage = 1;
+					var list = new List<HouseReport>();
+					do
+					{
+						var nodes = document.QuerySelectorAll("ul.sellListContent li");
+						if (nodes == null || nodes.Count() == 0)
+						{
+							int rety = 0;
+							while (rety < 10)
+							{
+								Thread.Sleep(2 * 1000);
+								cont = WebUtils.Get(host, pageUrl.Replace("{page}", curPage.ToString()));
+								html = new HtmlDocument();
+								html.LoadHtml(cont);
+								document = html.DocumentNode;
+								nodes = document.QuerySelectorAll("ul.sellListContent li");
+								if (nodes != null && nodes.Count() > 0)
+								{
+									break;
+								}
+								rety++;
+							}
+						}
+						if (nodes == null || nodes.Count() == 0)
+						{
+							break;
+						}
+						foreach (var node in nodes)
+						{
+							try
+							{
+								var a = node.QuerySelector("a");
+								var info = node.QuerySelector(".info");
+								var houseInfo = node.QuerySelector(".houseInfo");
+								var href = a?.GetAttributeValue("href", "");
+								if (href.Contains("goodhouse"))
+								{
+									continue;
+								}
+								var obj = new HouseReport();
+								obj.Url = href;
+								obj.CommunityName = communitie.Name;
+								obj.City = communitie.City;
+								obj.Region = communitie.Region;
+								obj.Province = communitie.Province;
+								obj.ReportDate = DateTime.Now.Date;
+								obj.HotArea = communitie.HotArea;
+								obj.Name = a.GetAttributeValue("title", "").TrimAll();
+								obj.ThumbImgUrl = a.QuerySelector(".lj-lazy")?.GetAttributeValue("data-original", "").TrimAll();
+								obj.TotalPrice = info?.QuerySelector(".totalPrice span")?.InnerText.TrimAll().ToDecimal();
+								obj.AvgPrive = info?.QuerySelector(".unitPrice span")?.InnerText.Replace("元/平", "").Replace(",", "").TrimAll().ToDecimal();
+								obj.BatchId = batchid;
+								obj.ReportDate = DateTime.Now.Date;
+								if (obj != null)
+								{
+									list.Add(obj);
+								}
+							}
+							catch (Exception ex)
+							{
+
+								Log.Error("DoHouse333:" + ex);
+							}
+
+
+						}
+						curPage++;
+						if (pageUrl.IsNullOrEmpty())
+						{
+							break;
+						}
+						cont = WebUtils.Get(host, pageUrl?.Replace("{page}", curPage.ToString()) + "?t=" + DateTime.Now.Ticks);
+						html = new HtmlDocument();
+						html.LoadHtml(cont);
+						document = html.DocumentNode;
+
+
+					}
+					while (maxPage > curPage);
+					if (list.Count > 0)
+					{
+						rep.InsertRange(list);
+						foreach (var item in list)
+						{
+							Task.Run(() =>
+							{
+								DoHouseDetail(item);
+							});
+						}
 					}
 				}
+				catch (Exception e)
+				{
+					Log.Error("DoHouse2222:" + e);
+
+				}
+				Log.Information("comm:" + communitie.Name);
+
+
+
 
 			}
+
 		}
 		catch (Exception e)
 		{
@@ -177,7 +221,7 @@ public class HomeReportJob : IJob
 			html.LoadHtml(cont);
 			var document = html.DocumentNode;
 			var introContent = document.QuerySelectorAll(".introContent li .label").ToList();
-			obj.HuXing = GetBaseInfo(introContent,"房屋户型");
+			obj.HuXing = GetBaseInfo(introContent, "房屋户型");
 			obj.Size = GetBaseInfo(introContent, "建筑面积");
 			obj.HuXingJieGou = GetBaseInfo(introContent, "户型结构"); ;
 			obj.BuildType = GetBaseInfo(introContent, "建筑类型");
@@ -192,7 +236,7 @@ public class HomeReportJob : IJob
 			obj.BuildJieGou = GetBaseInfo(introContent, "建筑结构");
 			obj.ZhuangXiu = GetBaseInfo(introContent, "装修情况");
 			obj.TiHuBiLi = GetBaseInfo(introContent, "梯户比例");
-			obj.DianTi = GetBaseInfo(introContent, "配备电梯");			
+			obj.DianTi = GetBaseInfo(introContent, "配备电梯");
 			obj.GuaPaiTime = GetBaseInfo(introContent, "挂牌时间").ToDateTime();
 			obj.JiaoYiQuanShu = GetBaseInfo(introContent, "交易权属");
 			obj.ShangCiJiaoYi = GetBaseInfo(introContent, "上次交易");
@@ -209,7 +253,8 @@ public class HomeReportJob : IJob
 			return null;
 		}
 	}
-	private string GetBaseInfo(List<HtmlNode> nodes,string name) {
+	private string GetBaseInfo(List<HtmlNode> nodes, string name)
+	{
 		foreach (var item in nodes)
 		{
 			if (item.InnerText.TrimAll() == name)
