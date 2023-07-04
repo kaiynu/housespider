@@ -34,12 +34,12 @@ public class HomeReportJob : IJob
 		var pageSize = 2000;
 
 		var batchId = DateTime.Now;
-		var url = "https://cd.ke.com";
+
 		var tasks = new List<Task>();
 		Func<object?, bool> fuc = (object? dto) =>
 		{
 			var areas = dto as List<CommunityReport>;
-			DoHouse(areas, url, batchId);
+			DoHouse(areas, batchId);
 			return true;
 		};
 		do
@@ -60,7 +60,7 @@ public class HomeReportJob : IJob
 		Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMinutes);
 	}
 
-	private void DoHouse(List<CommunityReport> communities, string host, DateTime batchid)
+	private void DoHouse(List<CommunityReport> communities, DateTime batchid)
 	{
 		try
 		{
@@ -71,8 +71,10 @@ public class HomeReportJob : IJob
 			var rep = serviceScope.ServiceProvider.GetService<SqlSugarRepository<HouseReport>>();
 			foreach (var communitie in communities)
 			{
+				
 				try
 				{
+					var host = communitie.Url.Substring(0, communitie.Url.IndexOf("/xiaoqu"));
 					if (communitie.Url.IsNullOrWhiteSpace())
 					{
 						continue;
