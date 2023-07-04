@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8+HiJDyOyayneS5i4NY3anW9jEtpQZyT+qkoyi3iZEUel4IPmZ3fEx9Wi+asvbeVQ7alF4ozmowgZT7ezuIB4g==",
+  "dgSpecHash": "uVEe54UnOyfiQObuiAUPVcSdvZ5xTSNNmKembzYd4VUOScOFzqNV16fSFLExhYdAZ7J0w9xgmBmxADogcLTBfA==",
   "success": true,
-  "projectFilePath": "E:\\repos\\Admin.NET\\Admin.NET\\Admin.NET.Application\\Admin.NET.Application.csproj",
+  "projectFilePath": "E:\\repos\\housespider\\Admin.NET.Application\\Admin.NET.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\likaihua\\.nuget\\packages\\aliyun.oss.sdk.netcore\\2.13.0\\aliyun.oss.sdk.netcore.2.13.0.nupkg.sha512",
     "C:\\Users\\likaihua\\.nuget\\packages\\anglesharp\\1.0.1\\anglesharp.1.0.1.nupkg.sha512",

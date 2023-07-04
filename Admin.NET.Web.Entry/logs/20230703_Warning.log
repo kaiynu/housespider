@@ -1,0 +1,18 @@
+warn: 2023-07-03 09:56:16.1309731 +08:00 星期一 L System.Logging.ScheduleService[0] #1
+      [Furion.Pure.dll] void Furion.Schedule.ScheduleLogger.Log(LogLevel logLevel, string message, object[] args, Exception ex)
+      Schedule hosted service preload completed, and a total of <4> schedulers are appended.
+warn: 2023-07-03 10:00:06.6934715 +08:00 星期一 L System.Logging.ScheduleService[0] #1
+      [Furion.Pure.dll] void Furion.Schedule.ScheduleLogger.Log(LogLevel logLevel, string message, object[] args, Exception ex)
+      Schedule hosted service preload completed, and a total of <4> schedulers are appended.
+warn: 2023-07-03 11:38:23.8080324 +08:00 星期一 L System.Logging.ScheduleService[0] #1
+      [Furion.Pure.dll] void Furion.Schedule.ScheduleLogger.Log(LogLevel logLevel, string message, object[] args, Exception ex)
+      Schedule hosted service preload completed, and a total of <4> schedulers are appended.
+warn: 2023-07-03 11:39:53.2183559 +08:00 星期一 L System.Logging.ScheduleService[0] #1
+      [Furion.Pure.dll] void Furion.Schedule.ScheduleLogger.Log(LogLevel logLevel, string message, object[] args, Exception ex)
+      Schedule hosted service preload completed, and a total of <4> schedulers are appended.
+warn: 2023-07-03 11:42:58.2744879 +08:00 星期一 L System.Logging.ScheduleService[0] #1
+      [Furion.Pure.dll] void Furion.Schedule.ScheduleLogger.Log(LogLevel logLevel, string message, object[] args, Exception ex)
+      Schedule hosted service preload completed, and a total of <4> schedulers are appended.
+warn: 2023-07-03 16:27:27.8876671 +08:00 星期一 L System.Logging.ScheduleService[0] #1
+      [Furion.Pure.dll] void Furion.Schedule.ScheduleLogger.Log(LogLevel logLevel, string message, object[] args, Exception ex)
+      Schedule hosted service preload completed, and a total of <4> schedulers are appended.

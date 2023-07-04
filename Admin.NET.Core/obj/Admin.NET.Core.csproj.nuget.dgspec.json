@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\repos\\Admin.NET\\Admin.NET\\Admin.NET.Core\\Admin.NET.Core.csproj": {}
+    "E:\\repos\\housespider\\Admin.NET.Core\\Admin.NET.Core.csproj": {}
   },
   "projects": {
-    "E:\\repos\\Admin.NET\\Admin.NET\\Admin.NET.Core\\Admin.NET.Core.csproj": {
+    "E:\\repos\\housespider\\Admin.NET.Core\\Admin.NET.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\repos\\Admin.NET\\Admin.NET\\Admin.NET.Core\\Admin.NET.Core.csproj",
+        "projectUniqueName": "E:\\repos\\housespider\\Admin.NET.Core\\Admin.NET.Core.csproj",
         "projectName": "Admin.NET.Core",
-        "projectPath": "E:\\repos\\Admin.NET\\Admin.NET\\Admin.NET.Core\\Admin.NET.Core.csproj",
+        "projectPath": "E:\\repos\\housespider\\Admin.NET.Core\\Admin.NET.Core.csproj",
         "packagesPath": "C:\\Users\\likaihua\\.nuget\\packages\\",
-        "outputPath": "E:\\repos\\Admin.NET\\Admin.NET\\Admin.NET.Core\\obj\\",
+        "outputPath": "E:\\repos\\housespider\\Admin.NET.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\likaihua\\AppData\\Roaming\\NuGet\\NuGet.Config",

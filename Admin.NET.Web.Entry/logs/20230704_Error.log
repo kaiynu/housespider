@@ -1,0 +1,6 @@
+fail: 2023-07-04 00:10:37.7813754 +08:00 星期二 L System.Logging.StringLogging[0] #151
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231

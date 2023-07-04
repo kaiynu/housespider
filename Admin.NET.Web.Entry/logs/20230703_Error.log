@@ -1,0 +1,552 @@
+fail: 2023-07-03 12:12:45.2230879 +08:00 星期一 L System.Logging.StringLogging[0] #207
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 229
+fail: 2023-07-03 12:21:54.1732757 +08:00 星期一 L System.Logging.StringLogging[0] #118
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 229
+fail: 2023-07-03 16:31:41.1278545 +08:00 星期一 L System.Logging.StringLogging[0] #111
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:34:23.0820143 +08:00 星期一 L System.Logging.StringLogging[0] #34
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:35:51.8640242 +08:00 星期一 L System.Logging.StringLogging[0] #170
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:36:48.2770172 +08:00 星期一 L System.Logging.StringLogging[0] #173
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:37:16.6058478 +08:00 星期一 L System.Logging.StringLogging[0] #170
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:45:24.9953691 +08:00 星期一 L System.Logging.StringLogging[0] #125
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:47:18.4971639 +08:00 星期一 L System.Logging.StringLogging[0] #151
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:47:57.8759445 +08:00 星期一 L System.Logging.StringLogging[0] #182
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:48:28.7689408 +08:00 星期一 L System.Logging.StringLogging[0] #238
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:50:30.6579352 +08:00 星期一 L System.Logging.StringLogging[0] #226
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:50:59.2476828 +08:00 星期一 L System.Logging.StringLogging[0] #35
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:53:06.5264553 +08:00 星期一 L System.Logging.StringLogging[0] #94
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:53:41.0516958 +08:00 星期一 L System.Logging.StringLogging[0] #139
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:54:09.6176070 +08:00 星期一 L System.Logging.StringLogging[0] #246
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:54:48.8156037 +08:00 星期一 L System.Logging.StringLogging[0] #126
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:56:39.7410508 +08:00 星期一 L System.Logging.StringLogging[0] #125
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:57:07.8325518 +08:00 星期一 L System.Logging.StringLogging[0] #197
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:57:25.3299420 +08:00 星期一 L System.Logging.StringLogging[0] #45
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:58:08.7467261 +08:00 星期一 L System.Logging.StringLogging[0] #146
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 16:59:34.6862423 +08:00 星期一 L System.Logging.StringLogging[0] #249
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:01:47.9120732 +08:00 星期一 L System.Logging.StringLogging[0] #129
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:28:28.4916338 +08:00 星期一 L System.Logging.StringLogging[0] #104
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:28:58.3283048 +08:00 星期一 L System.Logging.StringLogging[0] #34
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:30:02.1513737 +08:00 星期一 L System.Logging.StringLogging[0] #122
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:31:06.2961883 +08:00 星期一 L System.Logging.StringLogging[0] #179
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:32:53.2088260 +08:00 星期一 L System.Logging.StringLogging[0] #254
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:33:51.9618080 +08:00 星期一 L System.Logging.StringLogging[0] #146
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:34:20.3985408 +08:00 星期一 L System.Logging.StringLogging[0] #28
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:34:59.2348272 +08:00 星期一 L System.Logging.StringLogging[0] #116
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 17:36:00.7842884 +08:00 星期一 L System.Logging.StringLogging[0] #178
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:01:13.8484366 +08:00 星期一 L System.Logging.StringLogging[0] #218
+      [Furion.Pure.dll] void Furion.Logging.StringLoggingPart.LogError()
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:10:03.2992008 +08:00 星期一 L System.Logging.StringLogging[0] #264
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:11:38.6249086 +08:00 星期一 L System.Logging.StringLogging[0] #120
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:12:39.8060282 +08:00 星期一 L System.Logging.StringLogging[0] #153
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:14:54.0770254 +08:00 星期一 L System.Logging.StringLogging[0] #77
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:16:00.3774040 +08:00 星期一 L System.Logging.StringLogging[0] #190
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:19:19.0667447 +08:00 星期一 L System.Logging.StringLogging[0] #195
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:19:49.6351883 +08:00 星期一 L System.Logging.StringLogging[0] #201
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:25:42.2641372 +08:00 星期一 L System.Logging.StringLogging[0] #185
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:30:22.0141326 +08:00 星期一 L System.Logging.StringLogging[0] #85
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:39:34.7335196 +08:00 星期一 L System.Logging.StringLogging[0] #216
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:55:54.7432612 +08:00 星期一 L System.Logging.StringLogging[0] #292
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:57:49.5024406 +08:00 星期一 L System.Logging.StringLogging[0] #184
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:58:16.0648382 +08:00 星期一 L System.Logging.StringLogging[0] #272
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 18:59:15.2196842 +08:00 星期一 L System.Logging.StringLogging[0] #125
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 19:00:39.7900456 +08:00 星期一 L System.Logging.StringLogging[0] #285
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 19:02:25.0454880 +08:00 星期一 L System.Logging.StringLogging[0] #145
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 19:04:10.9281446 +08:00 星期一 L System.Logging.StringLogging[0] #242
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 19:09:51.6404852 +08:00 星期一 L System.Logging.StringLogging[0] #106
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 19:48:09.4235809 +08:00 星期一 L System.Logging.StringLogging[0] #159
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 19:50:45.0324877 +08:00 星期一 L System.Logging.StringLogging[0] #178
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 19:52:16.8025473 +08:00 星期一 L System.Logging.StringLogging[0] #228
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 19:55:34.9530892 +08:00 星期一 L System.Logging.StringLogging[0] #261
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 19:56:48.9819239 +08:00 星期一 L System.Logging.StringLogging[0] #237
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 20:52:21.9276474 +08:00 星期一 L System.Logging.StringLogging[0] #126
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 20:53:21.2825428 +08:00 星期一 L System.Logging.StringLogging[0] #71
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 20:54:50.1549048 +08:00 星期一 L System.Logging.StringLogging[0] #290
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 20:55:46.5947026 +08:00 星期一 L System.Logging.StringLogging[0] #282
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 20:56:18.4978141 +08:00 星期一 L System.Logging.StringLogging[0] #25
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:00:42.2025788 +08:00 星期一 L System.Logging.StringLogging[0] #189
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:01:27.8960898 +08:00 星期一 L System.Logging.StringLogging[0] #210
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:02:11.2799975 +08:00 星期一 L System.Logging.StringLogging[0] #210
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:02:43.4878155 +08:00 星期一 L System.Logging.StringLogging[0] #254
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:03:12.4628232 +08:00 星期一 L System.Logging.StringLogging[0] #112
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:03:40.5433618 +08:00 星期一 L System.Logging.StringLogging[0] #218
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:05:18.6878555 +08:00 星期一 L System.Logging.StringLogging[0] #79
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:06:10.1585209 +08:00 星期一 L System.Logging.StringLogging[0] #242
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:06:19.6510558 +08:00 星期一 L System.Logging.StringLogging[0] #179
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:08:22.3548612 +08:00 星期一 L System.Logging.StringLogging[0] #111
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:09:24.0287255 +08:00 星期一 L System.Logging.StringLogging[0] #102
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:09:53.4140089 +08:00 星期一 L System.Logging.StringLogging[0] #254
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:28:16.8661535 +08:00 星期一 L System.Logging.StringLogging[0] #129
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:30:20.6202300 +08:00 星期一 L System.Logging.StringLogging[0] #125
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:31:18.7445308 +08:00 星期一 L System.Logging.StringLogging[0] #77
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:31:58.2700996 +08:00 星期一 L System.Logging.StringLogging[0] #80
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:32:22.5244552 +08:00 星期一 L System.Logging.StringLogging[0] #246
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:35:29.4510595 +08:00 星期一 L System.Logging.StringLogging[0] #162
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:36:54.2033691 +08:00 星期一 L System.Logging.StringLogging[0] #237
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:37:41.2590066 +08:00 星期一 L System.Logging.StringLogging[0] #248
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:38:07.8294154 +08:00 星期一 L System.Logging.StringLogging[0] #245
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:39:41.7392711 +08:00 星期一 L System.Logging.StringLogging[0] #217
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:41:12.6377769 +08:00 星期一 L System.Logging.StringLogging[0] #247
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:41:45.3649401 +08:00 星期一 L System.Logging.StringLogging[0] #138
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:42:51.8122669 +08:00 星期一 L System.Logging.StringLogging[0] #72
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 21:45:36.3854363 +08:00 星期一 L System.Logging.StringLogging[0] #121
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 22:16:54.3385876 +08:00 星期一 L System.Logging.StringLogging[0] #89
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 22:17:50.3641957 +08:00 星期一 L System.Logging.StringLogging[0] #99
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 22:19:15.9050343 +08:00 星期一 L System.Logging.StringLogging[0] #182
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 22:47:53.8682645 +08:00 星期一 L System.Logging.StringLogging[0] #249
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
+fail: 2023-07-03 23:01:30.3731591 +08:00 星期一 L System.Logging.StringLogging[0] #250
+      [Admin.NET.Core.dll] HouseReport Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj)
+      DoHouseDetail:System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+         at System.Text.RegularExpressions.ThrowHelper.ThrowArgumentNullException(ExceptionArgument arg)
+         at System.Text.RegularExpressions.Regex.Match(String input)
+         at Admin.NET.Core.HomeReportJob.DoHouseDetail(HouseReport obj) in E:\repos\Admin.NET\Admin.NET\Admin.NET.Core\Job\HomeReportJob.cs:line 231
