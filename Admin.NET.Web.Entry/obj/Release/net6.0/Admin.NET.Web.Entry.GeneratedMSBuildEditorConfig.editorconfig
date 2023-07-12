@@ -17,29 +17,29 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Admin.NET.Web.Entry
 build_property.RootNamespace = Admin.NET.Web.Entry
-build_property.ProjectDir = E:\repos\Admin.NET\Admin.NET\Admin.NET.Web.Entry\
+build_property.ProjectDir = E:\repos\housespider\Admin.NET.Web.Entry\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\repos\Admin.NET\Admin.NET\Admin.NET.Web.Entry
+build_property.MSBuildProjectDirectory = E:\repos\housespider\Admin.NET.Web.Entry
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/repos/Admin.NET/Admin.NET/Admin.NET.Web.Entry/Views/Home/About.cshtml]
+[E:/repos/housespider/Admin.NET.Web.Entry/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/repos/Admin.NET/Admin.NET/Admin.NET.Web.Entry/Views/Home/Index.cshtml]
+[E:/repos/housespider/Admin.NET.Web.Entry/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/repos/Admin.NET/Admin.NET/Admin.NET.Web.Entry/Views/Shared/_Layout.cshtml]
+[E:/repos/housespider/Admin.NET.Web.Entry/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/repos/Admin.NET/Admin.NET/Admin.NET.Web.Entry/Views/_ViewImports.cshtml]
+[E:/repos/housespider/Admin.NET.Web.Entry/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/repos/Admin.NET/Admin.NET/Admin.NET.Web.Entry/Views/_ViewStart.cshtml]
+[E:/repos/housespider/Admin.NET.Web.Entry/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
