@@ -65,7 +65,17 @@ public class CommunityReportJob : IJob
 			}			
 		}
 		Task.WaitAll(tasks.ToArray());
-		Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMinutes);
+		using (var serviceScope = _serviceProvider.CreateScope()) {
+			var rep2 = serviceScope.ServiceProvider.GetService<SqlSugarRepository<Community>>();
+			rep2.Context.Ado.ExecuteCommand(@"insert into house.community(id,Name,url,region,city,province,address,hotarea,thumbimgurl,avgprice,buildyear,IsDelete)
+
+select c.id,c.Name,c.url,c.region,c.city,c.province,c.address,c.hotarea,c.thumbimgurl,c.avgprice,c.buildyear,0 isdelete #,batchid
+FROM house.communityReport c
+left join house.community a on  c.url=a.url 
+where a.id is null 
+and c.batchid=@bid", new { bid = batchId.ToString("yyyy-MM-dd HH:mm:ss") });
+		}
+			Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMinutes);
 	}
 	private bool DoCommunty(AreaDto area, DateTime batchid, string host)
 	{
@@ -77,7 +87,7 @@ public class CommunityReportJob : IJob
 			{
 				using var serviceScope = _serviceProvider.CreateScope();
 				var rep = serviceScope.ServiceProvider.GetService<SqlSugarRepository<CommunityReport>>();
-
+				
 				var cont = WebUtils.Get(area.Url, "");
 				HtmlDocument html = new HtmlDocument();
 				html.LoadHtml(cont);
@@ -160,6 +170,7 @@ public class CommunityReportJob : IJob
 				if (comlist.Count > 0)
 				{
 					rep.InsertRange(comlist.DistinctBy(i=>i.Url).ToList());
+					var list = new List<Community>();					
 				}
 			}
 

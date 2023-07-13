@@ -2,6 +2,40 @@
 
 [SugarTable(null, "小区")]
 [SystemTable]
+public class Community : EntityBase
+{
+
+	[Required, MaxLength(64)]
+	public virtual string Name { get; set; }
+
+
+	[MaxLength(512)]
+	[SugarColumn(Length = 512)]
+	public string? Url { get; set; }
+
+	[MaxLength(32)]
+	public string? Region { get; set; }
+	public string? City { get; set; }
+	public string? Province { get; set; }
+
+	public string? Street { get; set; }
+	public string? Address { get; set; }
+
+	public string? HotArea { get; set; }
+
+	[SugarColumn(Length = 512)]
+	public string? ThumbImgUrl { get; set; }
+	public decimal? AvgPrice { get; set; }
+
+	public int? SellCount { get; set; }
+
+	public int? BuildYear { get; set; }
+
+
+
+}
+[SugarTable(null, "小区")]
+[SystemTable]
 public class CommunityReport : EntityBase
 {
 

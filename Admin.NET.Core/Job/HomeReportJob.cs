@@ -24,12 +24,9 @@ public class HomeReportJob : IJob
 	{
 		using var serviceScope = _serviceProvider.CreateScope();
 		var rep = serviceScope.ServiceProvider.GetService<SqlSugarRepository<HouseReport>>();
-		var repCom = serviceScope.ServiceProvider.GetService<SqlSugarRepository<CommunityReport>>();
-		var batTime = repCom.AsQueryable().Max<DateTime?>("BatchId");
-		if (batTime == null)
-		{
-			return;
-		}
+		var repCom = serviceScope.ServiceProvider.GetService<SqlSugarRepository<Community>>();
+
+
 		var pageIndex = 0;
 		var pageSize = 2000;
 
@@ -44,7 +41,7 @@ public class HomeReportJob : IJob
 		};
 		do
 		{
-			var comList = repCom.GetPageList(i => i.BatchId == batTime.Value, new PageModel() { PageIndex = pageIndex, PageSize = pageSize });
+			var comList = repCom.GetPageList(i => 1==1, new PageModel() { PageIndex = pageIndex, PageSize = pageSize });
 			//var comList = repCom.GetList(i => i.BatchId == batTime.Value);
 			if (comList.Count() == 0)
 			{
