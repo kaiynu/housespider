@@ -35,7 +35,7 @@ public class HomeReportJob : IJob
 		var tasks = new List<Task>();
 		Func<object?, bool> fuc = (object? dto) =>
 		{
-			var areas = dto as List<CommunityReport>;
+			var areas = dto as List<Community>;
 			DoHouse(areas, batchId);
 			return true;
 		};
@@ -57,7 +57,7 @@ public class HomeReportJob : IJob
 		Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMinutes);
 	}
 
-	private void DoHouse(List<CommunityReport> communities, DateTime batchid)
+	private void DoHouse(List<Community> communities, DateTime batchid)
 	{
 		try
 		{
