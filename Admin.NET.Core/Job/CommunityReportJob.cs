@@ -67,13 +67,14 @@ public class CommunityReportJob : IJob
 		Task.WaitAll(tasks.ToArray());
 		using (var serviceScope = _serviceProvider.CreateScope()) {
 			var rep2 = serviceScope.ServiceProvider.GetService<SqlSugarRepository<Community>>();
-			rep2.Context.Ado.ExecuteCommand(@"insert into house.community(id,Name,url,region,city,province,address,hotarea,thumbimgurl,avgprice,buildyear,IsDelete)
+			var a=rep2.Context.Ado.ExecuteCommand(@"insert into house.community(id,Name,url,region,city,province,address,hotarea,thumbimgurl,avgprice,buildyear,IsDelete)
 
 select c.id,c.Name,c.url,c.region,c.city,c.province,c.address,c.hotarea,c.thumbimgurl,c.avgprice,c.buildyear,0 isdelete #,batchid
 FROM house.communityReport c
 left join house.community a on  c.url=a.url 
 where a.id is null 
 and c.batchid=@bid", new { bid = batchId.ToString("yyyy-MM-dd HH:mm:ss") });
+			Console.WriteLine("新插入小区数："+a);
 		}
 			Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMinutes);
 	}
