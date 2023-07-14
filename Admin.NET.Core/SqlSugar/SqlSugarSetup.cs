@@ -25,11 +25,11 @@ public static class SqlSugarSetup
         services.AddScoped(typeof(SqlSugarRepository<>)); // 仓储注册
         services.AddUnitOfWork<SqlSugarUnitOfWork>(); // 事务与工作单元注册
 
-        // 初始化数据库表结构及种子数据
-        dbOptions.ConnectionConfigs.ForEach(config =>
-        {
-            InitDatabase(sqlSugar, config);
-        });
+        //// 初始化数据库表结构及种子数据
+        //dbOptions.ConnectionConfigs.ForEach(config =>
+        //{
+        //    InitDatabase(sqlSugar, config);
+        //});
     }
 
     /// <summary>

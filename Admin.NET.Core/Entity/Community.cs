@@ -121,6 +121,8 @@ public class HouseReport : EntityBase
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
 	public string? Size { get; set; }
+
+	public decimal? DSize { get; set; }
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
 	public string? HuXingJieGou { get; set; }
@@ -132,7 +134,7 @@ public class HouseReport : EntityBase
 	public string? BuildLevel { get; set; }
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
-	public string? BuildYear { get; set; }
+	public int? BuildYear { get; set; }
 	public int? TotalLevel { get; set; }
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
@@ -158,6 +160,7 @@ public class HouseReport : EntityBase
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
 	public string? ShangCiJiaoYi { get; set; }
+	public DateTime? DShangCiJiaoYi { get; set; }
 	[SugarColumn(Length = 100)]
 	[MaxLength(100)]
 	public string? FangWuYongTu { get; set; }
