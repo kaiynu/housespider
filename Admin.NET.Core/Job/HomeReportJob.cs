@@ -51,7 +51,7 @@ public class HomeReportJob : IJob
 			{
 				break;
 			}
-			tasks.Add(Task.Factory.StartNew(() => { return DoHouse(comList, batchId); }));
+			tasks.Add(Task.Run(() => { return DoHouse(comList, batchId); }));
 			pageIndex++;
 		} while (true);
 		Task.WaitAll(tasks.ToArray());
@@ -68,7 +68,7 @@ public class HomeReportJob : IJob
 			catch (Exception)
 			{
 
-				throw;
+				
 			}
 		}
 		Console.WriteLine("==========totaltime:" + (DateTime.Now - batchId).TotalMinutes);
