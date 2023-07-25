@@ -3791,6 +3791,11 @@
             <param name="script">动态编译的作业代码</param>
             <returns></returns>
         </member>
+        <member name="T:Admin.NET.Core.HomeDetailReportJob">
+            <summary>
+            房产抓取服务
+            </summary>
+        </member>
         <member name="T:Admin.NET.Core.HomeReportJob">
             <summary>
             房产抓取服务
