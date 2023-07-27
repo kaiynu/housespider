@@ -173,4 +173,6 @@ public class HouseReport : EntityBase
 
 	public DateTime? ReportDate { get; set; }
 
+	public int Status { get; set; } 
+
 }

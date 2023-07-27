@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Admin.NET.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Admin.NET.Web.Entry.Controllers
@@ -16,14 +17,15 @@ namespace Admin.NET.Web.Entry.Controllers
         public IActionResult About()
         {
             ViewBag.Description = "11111111111";
-
+         
             return View();
         }
 		public IActionResult Index()
 		{
 			ViewBag.Description = "11111111111";
-
-			return View();
+            //var rep = new SqlSugarRepository<HouseReport>();
+            //var t=rep.AsQueryable().Where(i => i.UpdateTime == null).Take(3).ToList();
+            return View();
 		}
 	}
 }

@@ -162,6 +162,7 @@ public class HomeReportJob : IJob
 								obj.BatchId = batchid;
 								obj.ReportDate = DateTime.Now.Date;
 								obj.BuildYear = communitie.BuildYear;
+								obj.Status = -1;
 								if (obj != null)
 								{
 									list.Add(obj);

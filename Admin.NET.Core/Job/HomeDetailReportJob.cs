@@ -44,14 +44,15 @@ public class HomeDetailReportJob : IJob
 			};
 			do
 			{
-				var list = rep.AsQueryable().Where(i => i.UpdateTime == null).Take(pageSize).ToList();
+				var list2 = rep.AsQueryable().Where(i=>i.Status==-1).Take(pageSize).ToList();
+				var list = list2;
 				if (list.Count() == 0)
 				{
 					break;
 				}
 				foreach (var item in list)
 				{
-					tasks.Add(Task<bool>.Factory.StartNew(fuc, item));
+					tasks.Add(Task.Run(() => { DoHouseDetail(item);item.Status = 0; }));
 				}
 				Task.WaitAll(tasks.ToArray());
 				rep.AsUpdateable(list).ExecuteCommand();
@@ -102,7 +103,7 @@ public class HomeDetailReportJob : IJob
 			obj.DShangCiJiaoYi = obj.ShangCiJiaoYi.ToDateTime();
 			obj.FangWuYongTu = GetBaseInfo(introContent, "房屋用途");
 			obj.FangYuanHeYanMa = GetBaseInfo(introContent, "房源核验码");
-
+			obj.Status = 0;
 			var smallpics = document.QuerySelectorAll(".thumbnail .smallpic li").Select(i => new ImgDto { Src = i.QuerySelector("img").GetAttributeValue("src", ""), Desc = i.GetAttributeValue("data-desc", "") }).ToList();
 
 			obj.AllImgUrl = JsonConvert.SerializeObject(smallpics);;
